@@ -65,31 +65,7 @@
     </header>
     
     <main>
-        <section>
-            <h2>Featured Products</h2>
-            <ul>
-                <li>
-                    <span th:text = "${title}"  style="font-weight: bold;"></span>
-                    <span th:text = "${title}" style="color: #888;"></span>
-                </li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>Special Offers</h2>
-            <div>
-                <span th:text = "${title}"  style="font-weight: bold;"></span>
-                <span th:text = "${title}" style="color: #888;"></span>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Latest News</h2>
-            <div>
-                <span th:text = "${title}"  style="font-weight: bold;"></span>
-                <span th:text = "${title}" style="color: #888;"></span>
-            </div>
-        </section>
+            <img th:src="@{/images/BannerIndex.jpg}" style="width: 100%; height: 800px;" alt="">
     </main>
 
     <main>
@@ -99,6 +75,7 @@
                 <li>
                     <span th:text = "${title}"  style="font-weight: bold;"></span>
                     <span th:text = "${title}" style="color: #888;"></span>
+                    <img th:src="${pathimage}" style="height: 200px; width: 300px;" alt="">
                 </li>
             </ul>
         </section>

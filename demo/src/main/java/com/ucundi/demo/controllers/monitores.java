@@ -5,11 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller 
-public class camas {
+public class monitores {
 
-    @GetMapping("/camas")
+    @GetMapping("/monitores")
     public String helloWorld(Model model){
-        model.addAttribute("title", "Camas");
+        model.addAttribute("title", "Monitores");
+        model.addAttribute("pathimage", "/images/monitores.jpg");
         return "index"; 
     }
 }
