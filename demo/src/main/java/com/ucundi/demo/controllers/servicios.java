@@ -10,6 +10,7 @@ public class servicios {
     @GetMapping("/servicios")
     public String helloWorld(Model model){
         model.addAttribute("title", "Servicios");
+        
         return "index"; 
     }
 }
