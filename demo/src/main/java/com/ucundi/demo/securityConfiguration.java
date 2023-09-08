@@ -31,7 +31,7 @@ public class securityConfiguration{
                     .requestMatchers(new AntPathRequestMatcher("/")).authenticated()
 
                     //.requestMatchers("/servicios").authenticated()
-                    .anyRequest().authenticated()
+                    .anyRequest().permitAll()
             )
             .httpBasic(withDefaults())
             .formLogin(withDefaults());
@@ -49,8 +49,8 @@ public class securityConfiguration{
             PasswordEncoder passwordEncoder = passwordEncoder();
     
             UserDetails user = User.builder()
-                .username("user")
-                .password(passwordEncoder.encode("password"))
+                .username("Dalejandro31%$")
+                .password(passwordEncoder.encode("34$67!@#$%^&*()ñ0110Ñ"))
                 .roles("USER")
                 .build();
             return new InMemoryUserDetailsManager(user);   
