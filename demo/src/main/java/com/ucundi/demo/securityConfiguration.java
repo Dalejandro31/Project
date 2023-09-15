@@ -24,11 +24,11 @@ public class securityConfiguration{
         http
             .authorizeHttpRequests((authorize) -> authorize
                     // .requestMatchers("/camas", "/servicios", "/hola").authenticated()
-                    .requestMatchers(new AntPathRequestMatcher("/teclados")).authenticated()
-                    .requestMatchers(new AntPathRequestMatcher("/servicios")).authenticated()
-                    .requestMatchers(new AntPathRequestMatcher("/monitores")).authenticated()
-                    .requestMatchers(new AntPathRequestMatcher("/mouses")).authenticated()
-                    .requestMatchers(new AntPathRequestMatcher("/")).authenticated()
+                    .requestMatchers(new AntPathRequestMatcher("/teclados")).permitAll()
+                    .requestMatchers(new AntPathRequestMatcher("/servicios")).permitAll()
+                    .requestMatchers(new AntPathRequestMatcher("/monitores")).permitAll()
+                    .requestMatchers(new AntPathRequestMatcher("/mouses")).permitAll()
+                    .requestMatchers(new AntPathRequestMatcher("/")).permitAll()
 
                     //.requestMatchers("/servicios").authenticated()
                     .anyRequest().permitAll()
