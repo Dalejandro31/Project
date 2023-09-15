@@ -1,5 +1,9 @@
 package com.ucundi.demo.repositories;
 
-public interface serviciosRepositories {
+import org.springframework.data.repository.CrudRepository;
+
+import com.ucundi.demo.domain.serviciosEntity;
+
+public interface serviciosRepositories extends CrudRepository<serviciosEntity, Long> {
     
 }

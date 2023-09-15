@@ -1,5 +1,9 @@
 package com.ucundi.demo.repositories;
 
-public interface mousesRepositories {
+import org.springframework.data.repository.CrudRepository;
+
+import com.ucundi.demo.domain.mousesEntity;
+
+public interface mousesRepositories extends CrudRepository<mousesEntity, Long>{
     
 }
