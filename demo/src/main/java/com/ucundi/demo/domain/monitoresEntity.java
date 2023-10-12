@@ -1,8 +1,9 @@
 package com.ucundi.demo.domain;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id; 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.util.Objects;
 
 @Entity 
 public class monitoresEntity {
@@ -10,6 +11,20 @@ public class monitoresEntity {
     public monitoresEntity(){
         
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof monitoresEntity that)) return false;
+
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

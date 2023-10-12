@@ -49,8 +49,8 @@ public class securityConfiguration{
             PasswordEncoder passwordEncoder = passwordEncoder();
     
             UserDetails user = User.builder()
-                .username("Dalejandro31%$")
-                .password(passwordEncoder.encode("34$67!@#$%^&*()ñ0110Ñ"))
+                .username("Dalejandro31")
+                .password(passwordEncoder.encode("david123"))
                 .roles("USER")
                 .build();
             return new InMemoryUserDetailsManager(user);   
